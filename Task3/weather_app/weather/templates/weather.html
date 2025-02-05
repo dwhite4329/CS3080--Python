@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for {{city}}, {{state}}, {{country}}</title>
+</head>
+<body style="background-color: lightcyan;">
+    <h1>Welcome {{ first_name }} {{ last_name }}!</h1>
+    {% if state != None %}
+        <h2>Weather for {{city}}, {{state}}, {{country}}</h2>
+    {% else %}
+        <h2>Weather for {{city}}, {{country}}</h2>
+    {% endif %}
+
+    <h3>Temperature: {{ weather.fahrenheit }} / {{ weather.celsius }}</h3>
+
+    <h3>Precipitation: {{ weather.precipitation }}</h3>
+
+    <h3>Humidity: {{ weather.humidity }}</h3>
+
+    <h3>Wind Speed: {{ weather.wind_speed_mph }} / {{ weather.wind_speed_kmph }}</h3>
+
+    <h3>Last Updated: {{ weather.last_updated }}</h3>
+</body>
+</html>

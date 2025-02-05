@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body style="background-color: lightcyan;">
+    <form action="{% url 'weather' city='dummy' state='dummy' country='dummy'%}" method="post" onsubmit="this.action = this.action.replace('dummy', document.getElementById('city').value).replace('dummy', document.getElementById('state').value).replace('dummy', document.getElementById('country').value);">
+        <h3>Enter your name:</h3>
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        <p></p>
+        <h3>Enter the location you would like the weather for:</h3>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="state" placeholder="State" required>
+        <input type="text" id="country" placeholder="Country" required>
+        <button type="submit">Get Weather</button>
+    </form>
+</body>
+</html>
